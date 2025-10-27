@@ -1,0 +1,15 @@
+/* Q8: Dashboard */
+body{margin:0;font-family:Arial;background:#f8fafc;color:#0b1220;height:100vh;display:flex;flex-direction:column}
+.topbar{position:fixed;top:0;left:0;right:0;height:3.5rem;background:#0b1220;color:white;display:flex;align-items:center;padding:0 1rem;z-index:5}
+.layout{display:flex;margin-top:3.5rem;flex:1;min-height:calc(100vh - 3.5rem)}
+.sidebar{width:220px;background:white;border-right:1px solid rgba(2,6,23,0.06);padding:1rem;box-shadow:2px 0 6px rgba(2,6,23,0.02)}
+.sidebar nav a{display:block;padding:0.5rem 0;color:#0b1220;text-decoration:none}
+.content{flex:1;padding:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start}
+.box{flex:1 1 45%;min-height:10rem;background:white;padding:1rem;border-radius:8px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+/* make sidebar stack on small screens */
+@media (max-width:800px){
+  .layout{flex-direction:column}
+  .sidebar{width:100%}
+  .content{padding:1rem}
+  .box{flex:1 1 100%}
+}

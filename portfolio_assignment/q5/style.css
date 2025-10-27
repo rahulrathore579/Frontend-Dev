@@ -1,0 +1,42 @@
+/* Q5: Pricing table */
+body{font-family:Arial;margin:0;padding:2rem;background:#f8fafc}
+.pricing h1{text-align:center;margin-bottom:1rem}
+.plans{
+  display:flex;
+  gap:1rem;
+  align-items:stretch;
+  justify-content:center;
+}
+/* Equal height boxes */
+.plan{
+  flex:1 1 0;
+  background:white;
+  padding:1.25rem;
+  border-radius:8px;
+  border:1px solid rgba(2,6,23,0.06);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:transform .25s ease, background .25s ease;
+  min-height:14rem;
+}
+.plan h2{margin:0 0 0.5rem 0}
+.plan .price{margin-top:auto;font-size:1.5rem;font-weight:700;padding-top:1rem}
+.plan .btn{display:inline-block;margin-top:0.75rem;padding:0.5rem 1rem;text-decoration:none;border-radius:6px;border:1px solid transparent}
+
+/* hover effect */
+.plan:hover{
+  transform:scale(1.03);
+  background:#f1f5f9;
+}
+
+/* popular highlight */
+.plan.popular{
+  border:2px solid #0ea5e9;
+  box-shadow:0 10px 30px rgba(14,165,233,0.12);
+}
+
+/* responsive */
+@media (max-width:700px){
+  .plans{flex-direction:column}
+}
