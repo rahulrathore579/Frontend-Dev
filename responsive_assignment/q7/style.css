@@ -1,0 +1,13 @@
+/* Q7 - Loading animation with 3 circles */
+*{box-sizing:border-box}
+body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:#f8fafc}
+.loader{display:flex;gap:0.8rem;align-items:flex-end}
+.dot{width:18px;height:18px;border-radius:50%;background:#0b1220;animation:move 0.8s ease-in-out infinite}
+.dot.a{animation-delay:0s}
+.dot.b{animation-delay:0.15s}
+.dot.c{animation-delay:0.3s}
+@keyframes move{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+  100%{transform:translateY(0)}
+}

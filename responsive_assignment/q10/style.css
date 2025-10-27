@@ -1,0 +1,22 @@
+/* Q10 - Combined Flexbox and Grid */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#fff;color:#0b1220}
+.header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#0b1220;color:white}
+.container{display:grid;grid-template-columns:2fr 1fr;gap:1rem;padding:1rem}
+.article{background:#f8fafc;padding:1rem;border-radius:6px}
+.row{display:flex;gap:1rem;margin-top:1rem}
+.box{flex:1;background:white;padding:1rem;border-radius:6px;display:flex;align-items:center;justify-content:center}
+
+/* animate the title */
+@keyframes moveUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.animate{animation:moveUp .8s ease}
+
+/* footer full width */
+.footer{text-align:center;padding:1rem;background:#0b1220;color:white;margin-top:1rem}
+
+/* collapse to single column on small screens */
+@media (max-width:800px){
+  .container{grid-template-columns:1fr}
+  .row{flex-direction:column}
+  .header{flex-direction:column;gap:0.5rem}
+}

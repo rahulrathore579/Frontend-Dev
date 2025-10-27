@@ -1,0 +1,17 @@
+/* Q6 - Blog using CSS Grid and template areas */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#fff}
+.header{padding:1rem;background:#0b1220;color:white;display:flex;justify-content:space-between;align-items:center}
+.layout{display:grid;grid-template-columns:250px 1fr;gap:1rem;padding:1rem;grid-template-areas:"sidebar content"}
+.sidebar{grid-area:sidebar;background:#f8fafc;padding:1rem;border-radius:6px}
+.content{grid-area:content;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.post{background:white;padding:1rem;border-radius:6px}
+
+/* footer */
+.footer{text-align:center;padding:1rem;background:#f1f5f9}
+
+/* below 800px move sidebar below main content */
+@media (max-width:800px){
+  .layout{grid-template-columns:1fr;grid-template-areas:"content" "sidebar"}
+  .content{grid-template-columns:1fr}
+}

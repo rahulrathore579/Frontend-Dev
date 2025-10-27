@@ -1,0 +1,9 @@
+/* Q8 - Photo gallery using responsive Grid */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#fff;padding:1rem}
+.gallery h1{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.item{overflow:hidden;border-radius:8px;background:#f8fafc}
+.item img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .5s ease}
+.item figcaption{text-align:center;padding:0.5rem}
+.item:hover img{transform:scale(1.05)}
