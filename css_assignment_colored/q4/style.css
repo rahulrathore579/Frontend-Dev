@@ -1,0 +1,38 @@
+/* === Shadows & Depth Effects Styles === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: teal;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: rgba(0,0,0,0.3);
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.content {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  background-color: rgba(255,255,255,0.4);
+  transform: scale(1.05);
+}
